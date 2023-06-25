@@ -20,7 +20,7 @@ module "gke_cluster" {
   source         = "github.com/nirev23/tf-google-gke-cluster"
   GOOGLE_REGION  = var.GOOGLE_REGION
   GOOGLE_PROJECT = var.GOOGLE_PROJECT
-  GKE_NUM_NODES  = 2
+  GKE_NUM_NODES  = 1
 }
 
 module "github-repository" {
@@ -37,10 +37,6 @@ module "flux_bootstrap" {
   github_repository = "${var.GITHUB_OWNER}/${var.FLUX_GITHUB_REPO}"
   private_key       = module.tls_private_key.private_key_pem
   github_token      = var.GITHUB_TOKEN
-  #config_path       = "~/.kube/config"
-  #config_host       = module.gke_cluster.config_host
-  #config_token      = module.gke_cluster.config_token
-  #config_ca         = module.gke_cluster.config_ca
 }
 
 module "tls_private_key" {
