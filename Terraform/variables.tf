@@ -1,6 +1,6 @@
 variable "GOOGLE_PROJECT" {
   type        = string
-  default     = "nirev23"
+  default     = "devops-391113"
   description = "GCP project name"
 }
 
@@ -18,7 +18,7 @@ variable "GKE_MACHINE_TYPE" {
 
 variable "GKE_NUM_NODES" {
   type        = number
-  default     = "1"
+  default     = "2"
   description = "GKE nodes number"
 }
 
@@ -36,7 +36,7 @@ variable "GKE_POOL_NAME" {
 
 variable "FLUX_GITHUB_REPO" {
   type        = string
-  default     = "flux-git"
+  default     = "flux-git2"
   description = "Flux Git repo"
 }
 

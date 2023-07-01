@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  url: https://github.com/nirev23/flux-git
+  url: https://github.com/nirev23/flux-gitops
   ref:
     branch: main
 
@@ -23,7 +23,7 @@ spec:
       version: 1.9.0
       sourceRef:
         kind: GitRepository
-        name: flux-git
+        name: flux-gitops
         namespace: flux-system
   interval: 1m
   values:
